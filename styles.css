@@ -1,0 +1,26 @@
+.lineCounter,
+.codeEditor {
+    resize: none;
+    outline: none;
+    font-size: 13.333333333px; /* This is the most important part, make sure every char is exactly 8px width */
+    font-family: "Courier New", Courier, monospace;
+}
+
+.lineCounter {
+    display: flex;
+    border-color: transparent;
+    overflow-y: hidden;
+    text-align: right;
+    box-shadow: none;
+    color: #888;
+    background-color: #eaebec;
+    padding: 1px 9px 0px 0px;
+    width: 50px;
+}
+
+.codeEditor {
+    width: calc(100% - 50px);
+    border-radius: 0px;
+    border: none;
+    overflow-y: scroll;
+}
