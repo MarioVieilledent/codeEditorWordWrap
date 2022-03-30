@@ -53,9 +53,9 @@ function line_counter() {
     let lineCount = lines.length;
     let outarr = new Array();
     for (let x = 0; x < lineCount; x++) {
-        if ((lines[x].length * 8) + 10 > codeEditorWidth) {
+        if (lines[x].length * 8 > codeEditorWidth - 10) {
             outarr.push(x + 1);
-            let nbWrap = Math.floor(((lines[x].length * 8) + 10) / codeEditorWidth);
+            let nbWrap = Math.floor((lines[x].length * 8) / (codeEditorWidth - 10));
             for (let y = 0; y < nbWrap; y++) {
                 outarr.push(' ');
             }
